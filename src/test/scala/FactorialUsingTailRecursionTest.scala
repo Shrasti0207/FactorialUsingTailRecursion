@@ -7,4 +7,9 @@ class FactorialUsingTailRecursionTest extends AnyFunSuite{
   test("calculate factorial if the number is 0") {
     assert(FactorialUsingTailRecursion.factorial(0, 1) === 1)
   }
+  test("calculate factorial if the number is negative") {
+    assertThrows[IllegalArgumentException]{
+      FactorialUsingTailRecursion.factorial(-2, 1)
+    }
+  }
 }
